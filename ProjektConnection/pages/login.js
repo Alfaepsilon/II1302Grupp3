@@ -15,7 +15,7 @@ function hash(string_input){
 }
 //my salting function
 function hash_and_salt(text, salt){
-  debugger;
+  //debugger;
   input_to_salt = text + salt;
   salted_hash = hash(input_to_salt);
   return salted_hash;
