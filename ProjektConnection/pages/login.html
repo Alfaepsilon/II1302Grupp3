@@ -18,9 +18,9 @@
           <h2>Please sign in:</h2>
           <form name="login_form" class="login-form" onsubmit="show_input()" method="post">
             <label for="user">Username:</label><br/>
-            <input type="text" id="user" name="user"></input><br/>
+            <input type="text" id="user_field" name="user"></input><br/>
             <label for="password">Password:</label><br/>
-            <input type="password" id="password" name="password"></input><br/>
+            <input type="password" id="password_field" name="password"></input><br/>
             <input type="submit" value="Log in"></input>
             <button type="button">forgotten password?</button>
           </form>
@@ -28,6 +28,7 @@
 
         <div id="not-a-member">
           <h3>Not a member?</h3>
+          <!-- create-acc-tbn onclick should navigate to and load the create account page -->
           <button id="create-acc-btn">Create an account!</button>
         </div>
 
@@ -39,6 +40,7 @@
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
   <script src="firebase_config.js"></script>

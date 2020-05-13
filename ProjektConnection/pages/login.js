@@ -2,6 +2,11 @@
 //THEY SHOULD NOT BE USED FOR ANY SERIOUS CRYPTOGRAPHY UNLESS
 //YOU WANT SENSITIVE DATA TO BE ACCESSED BY UNAUTHORIZED USERS
 
+//navigation
+document.getElementById("create-acc-btn").onclick = function () {
+        location.href = "register.html";
+    };
+
 //source: https://www.geeksforgeeks.org/how-to-create-hash-from-string-in-javascript/
 function hash(string_input){
   let hash = 5059;
@@ -23,8 +28,8 @@ function hash_and_salt(text, salt){
 
 //show input
 function show_input(){
-  let user = document.forms["login_form"]["user"].value;
-  let pass = document.forms["login_form"]["password"].value;
+  let user = document.getElementById("user_field").value;
+  let pass = document.getElementById("password_field").value;
   let secret = hash_and_salt(pass, user);
   alert("username: " + user + ", secret(should not match your password input): " + secret);
 }
