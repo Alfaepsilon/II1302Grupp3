@@ -176,7 +176,7 @@ a {
 	margin-top: 20px;
 	width: 100%;
 }
-
+/* for smaller screens cleaner layout */
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;
