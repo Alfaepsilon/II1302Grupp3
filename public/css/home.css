@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    height: 578px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    background-color: DodgerBlue;
+}
+
+.flex-container > div {
+    /* background-color: #f1f1f1; */
+    /* height: 100%; */
+    /* width: 30%; */
+    /* margin: 0px 10px; */
+    /* text-align: center; */
+    line-height: 75px;
+    /* font-size: 30px; */
+    /* border: 1px solid red; */
+}
+.flex-container > .navbar {
+    background-color:rgb(30, 53, 116);
+    height: 100%;
+    width: 7%;
+    /* margin: 0px 10px; */
+    text-align: center;
+    /* line-height: 75px; */
+    font-size: 30px;
+}
+.navbar a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 5px;
+    text-align: center;
+}
+.navbar img{
+    margin: 0em;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+h4 {
+    border-bottom: thin solid darkblue;
+    /* display: block; */
+}
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+.flex-container > .friend-list {
+    background-color:rgb(80, 104, 170);
+    height: 100%;
+    width: 17%;
+    /* margin: 0px 10px; */
+    text-align: center;
+    font-size: 30px;
+}
+.friend-list ul li p {
+    font-size: 20px;
+    /* align-content: center;
+    justify-content: center; */
+    /* padding-bottom: 10px; */
+}
+li {
+    display: block;
+}
+.friend-list img {
+    /* margin-top: 10px; */
+    border: 2px solid black;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.friend-list p {
+    float: left;
+    margin: 20px;
+}
+.flex-container > .chat {
+    background-color: #f1f1f1;
+    height: 100%;
+    width: 76%;
+    /* margin: 0px 10px; */
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    /* border: 1px solid red; */
+}
+.chat-name {
+    background-color: rgb(30, 53, 116);
+    height: 12.9%;
+}
+.chat-name img {
+    border: 2px solid black;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+.chat-name p {
+    float: left;
+    margin-left: 50px;
+}
+.chat-name span {
+    float: right;
+    font-size: 80%;
+}
+.chat-section {
+    background-color: white;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    border: 2px solid black;
+}
+.messages {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    border-radius: 20px;
+    padding: 0px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.yours {
+    align-items: flex-start;
+  }
+  
+.yours .message {
+    margin-right: 25%;
+    background-color: #eee;
+    position: relative;
+    font-size: 70%;
+}
+.mine {
+    align-items: flex-end;
+}
+  
+.mine .message {
+    color: white;
+    margin-left: 25%;
+    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+    background-attachment: fixed;
+    position: relative;
+    font-size: 70%;
+}.write-section {
+    height: 17%;
+    display: flex;
+}
+input {
+    height: 100%;
+    width: 100%;
+}
+.write {
+    background-color: white;
+    height: 100%;
+    width: 80%;
+}
+.send {
+    display: flexbox;
+    height: 100%;
+    width: 21%;
+    float: right;
+    background-color: white;
+}
+button {
+    height: 100%;
+    width: 100%;
+}
+/* .yours .message.last:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -7px;
+    height: 20px;
+    width: 20px;
+    background: #eee;
+    border-bottom-right-radius: 15px;
+}
+.yours .message.last:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+} */
+    
+/* .mine .message.last:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: -8px;
+    height: 20px;
+    width: 20px;
+    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+    background-attachment: fixed;
+    border-bottom-left-radius: 15px;
+}
+  
+.mine .message.last:after {
+    content: "he";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-left-radius: 10px;
+} */
