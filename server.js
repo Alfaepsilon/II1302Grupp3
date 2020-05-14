@@ -13,38 +13,37 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const botName = 'Admin';
+const botName = 'Chatt admin';
 
-// RUn when a client connects
-
+// Run when a client connects
 io.on('connection', socket => {
     socket.on('joinRoom', ({username,room}) => {
+        const user = userJoin(socket.id ,username,room);
 
-        const user = userJoin(socket.id ,username,room)
-
+        //Anslutning to the correct room
         socket.join(user.room);
 
         // Welcom current user
-        socket.emit('message', formatMessage(botName, 'welcome To my new chatt!'));
+        socket.emit('message', formatMessage(botName, 
+            'welcome To my new chatt!'));
 
         // Broadcast to notiy when a user connects
         socket.broadcast.to(user.room)
-        .emit('message', formatMessage(botName, ` ${user.username} has joined the chat`));
-
+        .emit('message', formatMessage(botName, 
+            ` ${user.username} has joined the chat`));
 
         // send users and room info
         io.to(user.room).emit('roomUsers' , {
             room: user.room,
             users: getRoomUsers(user.room)
         });
-
     });    
     
     // Listen for chatMessage
     socket.on('chatMessage', msg => {
         const user = getTheCurrentUser(socket.id);
-
-        io.to(user.room).emit('message', formatMessage( user.username, msg));
+        io.to(user.room).emit('message', 
+        formatMessage( user.username, msg));
     });
 
     // This runs when the client disconnects
@@ -52,20 +51,14 @@ io.on('connection', socket => {
         const user = userLeaves(socket.id);
 
         if(user) {
-            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the chat!`));
+            io.to(user.room).emit('message', formatMessage(botName, 
+                `${user.username} has left the chat!`));
             // send users and room info
          io.to(user.room).emit('roomUsers' , {
             room: user.room,
             users: getRoomUsers(user.room)
-        });
-
-        }
-
-         
-       
-        
-    })
-
+         });
+    }})
 });
 
 const PORT = process.env.PORT || 3000;
