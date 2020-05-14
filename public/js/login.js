@@ -1,3 +1,4 @@
+//written by Alex
 (function(){
 
   //initialize the UI

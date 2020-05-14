@@ -8,8 +8,8 @@
         <div class="flex-container">
             <div class="navbar">
                 <p>Logo</p>
-                <a href="#" ><img src="https://www.palmkvistmaleri.se/wp-content/uploads/2018/02/default.jpg" alt="Profile Photo" width="60px" height="60px"></a>
-                <a href="#" ><img src="https://png.pngtree.com/png-vector/20190228/ourmid/pngtree-logout-vector-icon-png-image_711782.jpg" alt="Log Out" width="60px" height="60px" ></a>
+                <a href="#" ><img src="https://www.palmkvistmaleri.se/wp-content/uploads/2018/02/default.jpg" alt="Profile Photo" width="60px" height="60px" id="profile-img"></a>
+                <a href="#" ><img src="https://png.pngtree.com/png-vector/20190228/ourmid/pngtree-logout-vector-icon-png-image_711782.jpg" alt="Log Out" width="60px" height="60px" onclick="chatSelectApp.logOut()"></a>
             </div>
             <div class="friend-list">
                 <div>
@@ -64,5 +64,13 @@
                 </div>
             </div>
         </div>
+
+           <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+       		<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+       	  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+        <script src="js/firebase_config.js"></script>
+        <script src="js/chat_select.js"></script>
+        <script src="js/home.js"></script>
     </body>
 </html>
