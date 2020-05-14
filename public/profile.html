@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Profile Page</title>
-        <link rel="stylesheet" href="styles/profile.css">
+        <link rel="stylesheet" href="css/profile.css">
     </head>
     <body>
         <div class="flex-container">
@@ -19,7 +19,7 @@
             <div class="status">
                 <h3>Status</h3>
                 <p>Online</p><br><br><br>
-                <button>Delete Account</button>
+                <button id="delete-acc-btn">Delete Account</button>
             </div>
             <div class="personal-information">
                 <h1>Personal Information</h1><br><br>
@@ -43,5 +43,17 @@
                 <button>Save</button>
             </div>
         </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+        <script src="js/firebase_config.js"></script>
+        <script src="js/chat_select.js"></script>
+        <script src="js/profile.js"></script>
     </body>
 </html>
