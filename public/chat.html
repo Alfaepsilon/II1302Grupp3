@@ -17,11 +17,11 @@
         <h2 id="room-name"></h2>
         <h3><i class="fas fa-users"></i> Users</h3>
         <ul id="users">
-          
+
         </ul>
       </div>
       <div class="chat-messages">
-					
+
       </div>
     </main>
     <div class="chat-form-container">
@@ -37,14 +37,17 @@
       </form>
     </div>
   </div>
-  
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="js/firebase_config.js"></script>
 
   <!-- this one is used to grab the room name from the url -->
-  <script 
+  <script
   src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
-  integrity="sha256-ijqLssetA1NMNjZ+w1zaUafQQLm4IW5OoM8O+4tatME=" 
+  integrity="sha256-ijqLssetA1NMNjZ+w1zaUafQQLm4IW5OoM8O+4tatME="
   crossorigin="anonymous">
-</script>  
+</script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
 </body>

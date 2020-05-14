@@ -22,7 +22,7 @@ socket.on('roomUsers', ({users, room}) => {
 
 // Message from server
 socket.on('message', message => {
-  console.log(message);  
+  console.log(message);
   outputMessage(message);
 
   // scroll the chat down to the latest message
@@ -67,6 +67,6 @@ function outputRoomName(room) {
 // add user to the userlist in the DOM view
 function outputUsers(users) {
     userList.innerHTML = `
-       ${users.map(user => `<li>${user.username}</li>`).join('')}   
+       ${users.map(user => `<li>${user.username}</li>`).join('')}
     `;
 }
