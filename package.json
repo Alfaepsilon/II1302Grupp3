@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
+    "jest": "^26.0.1",
     "firebase-admin": "^8.12.1",
     "firebaseui": "^4.5.0",
     "moment": "^2.25.3",
