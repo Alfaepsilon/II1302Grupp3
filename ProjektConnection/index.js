@@ -1,6 +1,7 @@
 var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
+//var rc4 = require('../rc4.js');
 var port = 8080;
 var counter = 1;
 var max = 10;
@@ -40,6 +41,7 @@ http.listen(port, function(){
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
+    //msg = rc4(msg)
     io.emit('chat message', msg);
   });
 });
